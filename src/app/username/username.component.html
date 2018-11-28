@@ -1,0 +1,19 @@
+<!-- <input
+  type="text"
+  name="userNameBox"
+  class="form-control"
+  (input)="onUpdateUser($event)"> -->
+
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="userName"
+    (ngModelChange)="userChange()"
+    
+    >
+  
+  <p>{{ userName }}</p>
+<button 
+  class="btn btn-primary"
+  [disabled]="!userResetEnable"
+  (click)="resetUser()">Reset User Name</button>
